@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: "App for Apps"
+  name: app-for-apps
   namespace: openshift-gitops
 spec:
   project: default
