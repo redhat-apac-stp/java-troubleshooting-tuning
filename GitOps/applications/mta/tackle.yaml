@@ -5,3 +5,4 @@ metadata:
   namespace: openshift-mta
 spec:
   feature_auth_required: 'true'
+  rwx_supported: "false"
