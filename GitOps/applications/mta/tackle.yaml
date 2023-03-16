@@ -6,3 +6,4 @@ metadata:
 spec:
   feature_auth_required: 'true'
   rwx_supported: "false"
+  rhsso_external_access: "true"
