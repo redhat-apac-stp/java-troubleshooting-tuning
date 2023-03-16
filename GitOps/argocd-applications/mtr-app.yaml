@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: migration-toolkit-for-runtime
+  namespace: openshift-gitops
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/redhat-apac-stp/java-troubleshooting-tuning.git
+    targetRevision: main
+    path: GitOps/applications/mtr
+  syncPolicy:
+    automated: {}
+  destination: 
+    name: in-cluster
