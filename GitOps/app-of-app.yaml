@@ -4,11 +4,11 @@ metadata:
   name: app-of-apps
   namespace: openshift-gitops
 spec:
-  project: infra
+  project: default
   source:
-    repoURL: https://github.com/redhat-apac-stp/gitops-practices.git
+    repoURL: https://github.com/redhat-apac-stp/java-troubleshooting-tuning.git
     targetRevision: main
-    path: demo/argocd-applications
+    path: gitops/argocd-applications
   syncPolicy:
     automated: {}
   destination: 
