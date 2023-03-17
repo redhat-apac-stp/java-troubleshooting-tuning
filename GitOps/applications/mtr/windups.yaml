@@ -1,0 +1,71 @@
+
+apiVersion: windup.jboss.org/v1
+kind: Windup
+metadata:
+  labels:
+    application: windup
+  name: mtr
+  namespace: mtr
+spec:
+  executor_liveness_probe: '/bin/bash, -c, /opt/windup-cli/bin/livenessProbe.sh'
+  sso_secret: ''
+  sso_truststore_password: ''
+  jgroups_cluster_password: ''
+  sso_saml_logout_page: /
+  ingress_custom_labels: ''
+  windup_Volume_Capacity: 20G
+  postgresql_shared_buffers: ''
+  sso_saml_keystore: keystore.jks
+  executor_mem_limit: 4Gi
+  max_post_size: '4294967296'
+  jgroups_encrypt_name: ''
+  web_mem_limit: 4Gi
+  postgresql_mem_limit: 2Gi
+  db_max_pool_size: ''
+  webLivenessInitialDelaySeconds: '120'
+  webReadinessInitialDelaySeconds: '120'
+  db_jndi: 'java:jboss/datasources/WindupServicesDS'
+  sso_saml_keystore_secret: eap7-app-secret
+  jgroups_encrypt_secret: eap-app-secret
+  auto_deploy_exploded: 'false'
+  executor_desired_replicas: 1
+  executor_cpu_request: '0.5'
+  messaging_serializer: http.post.serializer
+  web_cpu_request: '0.5'
+  postgresql_cpu_request: '0.5'
+  postgresql_max_connections: '200'
+  executor_readiness_probe: '/bin/bash, -c, /opt/windup-cli/bin/livenessProbe.sh'
+  web_readiness_probe: '/bin/bash, -c, /opt/eap/bin/readinessProbe.sh'
+  sso_force_legacy_security: 'false'
+  webReadinessTimeoutSeconds: '10'
+  db_tx_isolation: ''
+  hostname_http: ''
+  volumeCapacity: 20G
+  tls_secret: ''
+  webLivenessTimeoutSeconds: '10'
+  sso_saml_certificate_name: jboss
+  sso_saml_keystore_password: mykeystorepass
+  jgroups_encrypt_password: ''
+  db_min_pool_size: ''
+  sso_truststore_secret: eap7-app-secret
+  db_username: ''
+  webReadinessFailureThreshold: '3'
+  webLivenessFailureThreshold: '3'
+  executor_cpu_limit: '4'
+  executor_mem_request: 0.5Gi
+  sso_truststore: ''
+  sso_enable_cors: 'false'
+  postgresql_cpu_limit: '2'
+  web_cpu_limit: '4'
+  postgresql_mem_request: 0.5Gi
+  web_mem_request: 0.5Gi
+  mq_cluster_password: ''
+  sso_disable_ssl_certificate_validation: 'true'
+  db_database: mta
+  db_password: ''
+  mq_queues: ''
+  jgroups_encrypt_keystore: jgroups.jceks
+  gc_max_metaspace_size: 512
+  mq_topics: ''
+  sso_realm: mtr
+  web_liveness_probe: '/bin/bash, -c, /opt/eap/bin/livenessProbe.sh'
