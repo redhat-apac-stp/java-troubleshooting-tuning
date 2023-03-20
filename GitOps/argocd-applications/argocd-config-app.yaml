@@ -11,5 +11,7 @@ spec:
     path: GitOps/applications/argocd
   syncPolicy:
     automated: {}
+    syncOptions:
+    - CreateNamespace=true
   destination: 
     name: in-cluster
