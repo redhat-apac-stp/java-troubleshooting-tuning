@@ -1,0 +1,11 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  #annotations:
+  #  olm.providedAPIs: Addon.v1alpha1.tackle.konveyor.io,Keycloak.v1alpha1.keycloak.org,KeycloakBackup.v1alpha1.keycloak.org,KeycloakClient.v1alpha1.keycloak.org,KeycloakRealm.v1alpha1.keycloak.org,KeycloakUser.v1alpha1.keycloak.org,Tackle.v1alpha1.tackle.konveyor.io
+  name: openshift-mta-4w8xd
+  namespace: openshift-mta
+spec:
+  targetNamespaces:
+  - openshift-mta
+  upgradeStrategy: Default
