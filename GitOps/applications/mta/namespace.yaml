@@ -1,9 +1,0 @@
-# apiVersion: project.openshift.io/v1
-# kind: Project
-# metadata:
-#   labels:
-#       app.kubernetes.io/instance: migration-toolkit-for-application
-#   name: openshift-mta
-# spec:
-#   finalizers:
-#   - kubernetes
