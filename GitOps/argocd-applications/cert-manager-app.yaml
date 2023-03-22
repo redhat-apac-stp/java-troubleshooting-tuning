@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: certificate-manager
+  namespace: openshift-gitops
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/redhat-apac-stp/java-troubleshooting-tuning.git
+    targetRevision: main
+    path: GitOps/applications/cert-manager
+  syncPolicy:
+    automated: {}
+    # syncOptions:
+    # - CreateNamespace=true
+  destination: 
+    name: in-cluster
