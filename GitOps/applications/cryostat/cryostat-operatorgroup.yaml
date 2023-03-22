@@ -1,0 +1,11 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  #annotations:
+  #  olm.providedAPIs: Cryostat.v1beta1.operator.cryostat.io,FlightRecorder.v1beta1.operator.cryostat.io,Recording.v1beta1.operator.cryostat.io
+  name: cryostat-gbnpp
+  namespace: cryostat
+spec:
+  targetNamespaces:
+  - cryostat
+  upgradeStrategy: Default
