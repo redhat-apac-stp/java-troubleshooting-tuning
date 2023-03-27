@@ -156,6 +156,14 @@ rules:
       - "operator.cryostat.io"
     resources:
       - "cryostats"
+  - verbs:
+      - '*'
+    apiGroups:
+      - "monitoring.coreos.com"
+    resources:
+      - "servicemonitors"
+
+
 
 ---
 kind: ClusterRoleBinding
