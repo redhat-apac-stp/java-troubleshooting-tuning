@@ -1,19 +1,19 @@
-# apiVersion: argoproj.io/v1alpha1
-# kind: Application
-# metadata:
-#   name: cryostat
-#   namespace: openshift-gitops
-#   annotations:
-#     argocd.argoproj.io/sync-wave: "5"
-# spec:
-#   project: default
-#   source:
-#     repoURL: https://github.com/redhat-apac-stp/java-troubleshooting-tuning.git
-#     targetRevision: main
-#     path: GitOps/applications/cryostat
-#   syncPolicy:
-#     automated: {}
-#     # syncOptions:
-#     # - CreateNamespace=true
-#   destination: 
-#     name: in-cluster
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cryostat
+  namespace: openshift-gitops
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/redhat-apac-stp/java-troubleshooting-tuning.git
+    targetRevision: main
+    path: GitOps/applications/cryostat
+  syncPolicy:
+    automated: {}
+    # syncOptions:
+    # - CreateNamespace=true
+  destination: 
+    name: in-cluster
