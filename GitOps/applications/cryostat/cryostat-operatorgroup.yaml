@@ -4,7 +4,7 @@ metadata:
   #annotations:
   #  olm.providedAPIs: Cryostat.v1beta1.operator.cryostat.io,FlightRecorder.v1beta1.operator.cryostat.io,Recording.v1beta1.operator.cryostat.io
   name: cryostat-gbnpp
-  namespace: cryostat
+  namespace: my-quarkus-app
 spec:
   targetNamespaces:
   - cryostat

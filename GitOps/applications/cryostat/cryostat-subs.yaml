@@ -4,11 +4,11 @@ metadata:
   #labels:
   #  operators.coreos.com/cryostat-operator.cryostat: ""
   name: cryostat-operator
-  namespace: cryostat
+  namespace: my-quarkus-app
 spec:
-  channel: stable-2.0
+  channel: stable
   installPlanApproval: Automatic
   name: cryostat-operator
   source: redhat-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: cryostat-operator.v2.0.0-6.1647887957.p
+  #startingCSV: cryostat-operator.v2.0.0-6.1647887957.p
