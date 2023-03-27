@@ -150,6 +150,12 @@ rules:
       - "windup.jboss.org"
     resources:
       - "windups"
+  - verbs:
+      - '*'
+    apiGroups:
+      - "operator.cryostat.io"
+    resources:
+      - "cryostats"
 
 ---
 kind: ClusterRoleBinding
