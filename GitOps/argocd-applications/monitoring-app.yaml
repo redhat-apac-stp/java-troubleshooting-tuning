@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: namespaces
+  namespace: openshift-gitops
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/redhat-apac-stp/java-troubleshooting-tuning.git
+    targetRevision: main
+    path: GitOps/applications/monitoring
+  syncPolicy:
+    automated: {}
+    # syncOptions:
+    # - CreateNamespace=true
+  destination: 
+    name: in-cluster
