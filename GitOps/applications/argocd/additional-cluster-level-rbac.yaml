@@ -162,7 +162,13 @@ rules:
       - "monitoring.coreos.com"
     resources:
       - "servicemonitors"
-
+  - verbs:
+      - '*'
+    apiGroups:
+      - "keda.sh"
+    resources:
+      - "triggerauthentications"
+      - "scaledobjects"
 
 
 ---
