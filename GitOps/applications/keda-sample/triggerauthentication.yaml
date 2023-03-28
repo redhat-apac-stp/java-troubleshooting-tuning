@@ -6,8 +6,8 @@ metadata:
 spec:
   secretTargetRef:
   - parameter: bearerToken
-    name: thanos-dockercfg-cw6hj       # update this
+    name: thanos-token-9dfxx       # update this
     key: token
   - parameter: ca
-    name: thanos-dockercfg-cw6hj       # update this
+    name: thanos-token-9dfxx       # update this
     key: ca.crt
