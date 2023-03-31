@@ -169,6 +169,12 @@ rules:
     resources:
       - "triggerauthentications"
       - "scaledobjects"
+  - verbs:
+      - '*'
+    apiGroups:
+      - "image.openshift.io"
+    resources:
+      - "imagestreams"
 
 
 ---
