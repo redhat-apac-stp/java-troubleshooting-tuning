@@ -1,0 +1,24 @@
+kind: ImageStream
+apiVersion: image.openshift.io/v1
+metadata:
+  name: code-with-quarkus
+  namespace: my-quarkus-app-1
+  labels:
+    app: code-with-quarkus
+    app.kubernetes.io/component: code-with-quarkus
+    app.kubernetes.io/instance: code-with-quarkus
+    app.kubernetes.io/name: code-with-quarkus
+    app.kubernetes.io/part-of: code-with-quarkus-app
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+    - name: v1
+      from:
+        kind: DockerImage
+        name: 'quay.io/rajivranjan/code-with-quarkus:v1'
+      importPolicy:
+        insecure: true
+        importMode: Legacy
+      referencePolicy:
+        type: Local

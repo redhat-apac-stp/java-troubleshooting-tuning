@@ -1,0 +1,68 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: code-with-quarkus
+  namespace: my-quarkus-app-1
+  labels:
+    app: code-with-quarkus
+    app.kubernetes.io/component: code-with-quarkus
+    app.kubernetes.io/instance: code-with-quarkus
+    app.kubernetes.io/name: code-with-quarkus
+    app.kubernetes.io/part-of: code-with-quarkus-app
+    app.openshift.io/runtime-namespace: my-quarkus-app-1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: code-with-quarkus
+  template:
+    metadata:
+      labels:
+        app: code-with-quarkus
+        deployment: code-with-quarkus
+    spec:
+      containers:
+        - resources: {}
+          readinessProbe:
+            httpGet:
+              path: /q/health
+              port: 8080
+              scheme: HTTP
+            timeoutSeconds: 1
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+          terminationMessagePath: /dev/termination-log
+          name: code-with-quarkus
+          livenessProbe:
+            httpGet:
+              path: /q/health
+              port: 8080
+              scheme: HTTP
+            timeoutSeconds: 1
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+            - containerPort: 8443
+              protocol: TCP
+            - containerPort: 9096
+              protocol: TCP
+          imagePullPolicy: IfNotPresent
+          terminationMessagePolicy: File
+          image: >-
+            image-registry.openshift-image-registry.svc:5000/my-quarkus-app-1/code-with-quarkus@sha256:9e3d6f5c045062a0a784a052254eb62659b26fab69a5a46416eb81c0815b68e6
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      securityContext: {}
+      schedulerName: default-scheduler
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 25%
+      maxSurge: 25%
+  revisionHistoryLimit: 10
+  progressDeadlineSeconds: 600
