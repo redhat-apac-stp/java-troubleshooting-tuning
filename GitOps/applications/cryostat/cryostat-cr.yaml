@@ -2,7 +2,7 @@ apiVersion: operator.cryostat.io/v1beta1
 kind: Cryostat
 metadata:
   name: cryostat-sample
-  namespace: my-quarkus-app
+  namespace: my-quarkus-app-1
 spec:
   resources:
     coreResources:

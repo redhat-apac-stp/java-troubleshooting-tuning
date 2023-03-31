@@ -4,7 +4,7 @@ metadata:
   #labels:
   #  operators.coreos.com/cryostat-operator.cryostat: ""
   name: cryostat-operator
-  namespace: my-quarkus-app
+  namespace: my-quarkus-app-1
 spec:
   channel: stable
   installPlanApproval: Automatic
