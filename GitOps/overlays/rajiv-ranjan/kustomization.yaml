@@ -3,7 +3,5 @@ kind: Kustomization
 metadata:
   name: all-argocd-apps-kustomize-rajiv-ranjan
 
-patchesStrategicMerge:
-  - cert-manager-app.yaml
 resources:
   - ../../base/argocd-applications
