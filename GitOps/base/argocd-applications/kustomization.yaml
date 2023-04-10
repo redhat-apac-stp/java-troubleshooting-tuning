@@ -7,3 +7,4 @@ resources:
   - argocd-config-app.yaml
   - namespaces-app.yaml
   - cert-manager-app.yaml
+  - cryostat-app.yaml
