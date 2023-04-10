@@ -1,0 +1,12 @@
+{
+    "name": "automated_rule_01",
+    "description": "My first automated rule for JFR recording of a sample quarkus app",
+    "matchExpression": "target.labels.app == 'code-with-quarkus'",
+    "eventSpecifier": "template=Continuous,type=TARGET",
+    "archivalPeriodSeconds": 0,
+    "initialDelaySeconds": 0,
+    "preservedArchives": 0,
+    "maxAgeSeconds": 0,
+    "maxSizeBytes": 0,
+    "enabled": true
+}
