@@ -1,0 +1,8 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: all-argocd-apps-kustomize
+resources:
+# One can use app-of-app.yaml to deploy all items OR patch each item in the overlays
+  - argocd-config-app.yaml
+  - namespaces-app.yaml

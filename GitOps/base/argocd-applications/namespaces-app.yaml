@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argocd-config
+  name: namespaces
   namespace: openshift-gitops
   annotations:
     argocd.argoproj.io/sync-wave: "1"
@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/redhat-apac-stp/java-troubleshooting-tuning.git
     targetRevision: main
-    path: GitOps/applications/argocd
+    path: GitOps/base/applications/namespaces
   syncPolicy:
     automated: {}
     # syncOptions:
