@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/redhat-apac-stp/java-troubleshooting-tuning.git
     targetRevision: main
-    path: GitOps/applications/cryostat
+    path: GitOps/base/applications/cryostat
   syncPolicy:
     automated: {}
     # syncOptions:
