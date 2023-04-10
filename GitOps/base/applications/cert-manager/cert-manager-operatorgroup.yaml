@@ -3,7 +3,7 @@ kind: OperatorGroup
 metadata:
   annotations:
     olm.providedAPIs: CertManager.v1alpha1.operator.openshift.io,Certificate.v1.cert-manager.io,CertificateRequest.v1.cert-manager.io,Challenge.v1.acme.cert-manager.io,ClusterIssuer.v1.cert-manager.io,Issuer.v1.cert-manager.io,Order.v1.acme.cert-manager.io
-  name: cert-manager-operator-4t6tp
+  name: cert-manager-operator-obj01
   namespace: cert-manager-operator
 spec:
   targetNamespaces:
