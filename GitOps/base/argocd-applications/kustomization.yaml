@@ -6,3 +6,4 @@ resources:
 # One can use app-of-app.yaml to deploy all items OR patch each item in the overlays
   - argocd-config-app.yaml
   - namespaces-app.yaml
+  - cert-manager-app.yaml

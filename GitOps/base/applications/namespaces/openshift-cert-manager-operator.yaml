@@ -3,3 +3,15 @@ kind: Project
 metadata:
   name: openshift-cert-manager-operator
 spec: {}
+
+---
+
+apiVersion: project.openshift.io/v1
+kind: Project
+metadata:
+  labels:
+    kubernetes.io/metadata.name: cert-manager-operator
+  name: cert-manager-operator
+spec:
+  finalizers:
+  - kubernetes

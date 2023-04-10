@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/redhat-apac-stp/java-troubleshooting-tuning.git
     targetRevision: main
-    path: GitOps/argocd-applications
+    path: GitOps/base/argocd-applications
   syncPolicy:
     automated: {}
   destination: 
